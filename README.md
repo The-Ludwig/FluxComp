@@ -1,4 +1,4 @@
-![The Logo of the FluxComp python package depicting a stylized version of the Flux Capacitor from Back to the Future including a cosmic ray air shower](https://raw.github.com/The-Ludwig/FluxComp/main/logo.svg)
+<img src="https://raw.github.com/The-Ludwig/FluxComp/main/logo.svg" style="float: left" width="300" alt="The Logo of the FluxComp python package depicting a stylized version of the Flux Capacitor from Back to the Future including a cosmic ray air shower">
 
 <!-- [![Read the Docs](https://img.shields.io/readthedocs/panama?style=for-the-badge)](https://panama.readthedocs.io/en/latest/) -->
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/The-Ludwig/FluxComp/ci.yml?style=for-the-badge)](https://github.com/The-Ludwig/FluxComp/actions/workflows/ci.yml)
