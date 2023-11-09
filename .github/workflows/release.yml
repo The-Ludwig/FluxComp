@@ -1,0 +1,41 @@
+name: Release to PyPi
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  release:
+    strategy:
+      matrix:
+        python-version: ["3.11"]
+        os: [ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    permissions:
+      # IMPORTANT: this permission is mandatory for trusted publishing
+      id-token: write
+    steps:
+      - name: Set up PDM
+        uses: pdm-project/setup-pdm@v3
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: true
+      - name: Install dependencies
+        run: |
+          pdm sync -d
+      - name: Run Tests
+        run: |
+          pdm run -v coverage run --include="src/**" -m pytest
+      - name: Produce coverage xml
+        run: pdm run -v coverage xml
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+      - name: Deploy to PyPi
+        run: pdm publish

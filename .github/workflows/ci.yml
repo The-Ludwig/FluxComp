@@ -1,0 +1,38 @@
+name: CI
+# this avoids duplicated builds on pull request for the cost
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    strategy:
+      matrix:
+        python-version: ["3.8"]
+        os: [ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up PDM
+        uses: pdm-project/setup-pdm@v3
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: true
+      - name: Install dependencies
+        run: |
+          pdm sync -d
+      - name: Run Tests
+        run: |
+          pdm run -v coverage run --include="src/**" -m pytest
+      - name: Produce coverage xml
+        run: pdm run -v coverage xml
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
