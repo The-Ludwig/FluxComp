@@ -111,4 +111,4 @@ dev = [
 ]
 
 [tool.pdm.build]
-includes = ["panama"]
+includes = ["src/fluxcomp"]
