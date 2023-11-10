@@ -2,10 +2,10 @@
 # It is not intended for manual editing.
 
 [metadata]
-groups = ["default", "dev"]
+groups = ["default", "dev", "docs"]
 strategy = ["cross_platform"]
 lock_version = "4.4"
-content_hash = "sha256:2ee1cc8e5e7f8ccb0f71c3d544de233d0d2d0329de42677744d8f07e709b8ba6"
+content_hash = "sha256:e42ea9423175e6fd97aa9e084047266c148fc8846bc5a3283167dd4177cc8cb0"
 
 [[package]]
 name = "alabaster"
@@ -273,12 +273,12 @@ files = [
 
 [[package]]
 name = "docutils"
-version = "0.18.1"
-requires_python = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+version = "0.19"
+requires_python = ">=3.7"
 summary = "Docutils -- Python Documentation Utilities"
 files = [
-    {file = "docutils-0.18.1-py2.py3-none-any.whl", hash = "sha256:23010f129180089fbcd3bc08cfefccb3b890b0050e1ca00c867036e9d161b98c"},
-    {file = "docutils-0.18.1.tar.gz", hash = "sha256:679987caf361a7539d76e584cbeddc311e3aee937877c87346f31debc63e9d06"},
+    {file = "docutils-0.19-py3-none-any.whl", hash = "sha256:5e1de4d849fee02c63b040a4a3fd567f4ab104defd8a5511fbbc24a8a017efbc"},
+    {file = "docutils-0.19.tar.gz", hash = "sha256:33995a6753c30b7f577febfc2c50411fec6aac7f7ffeb7c4cfe5991072dcf9e6"},
 ]
 
 [[package]]
@@ -405,15 +405,16 @@ files = [
 
 [[package]]
 name = "m2r2"
-version = "0.3.2"
+version = "0.3.3.post2"
+requires_python = ">=3.7"
 summary = "Markdown and reStructuredText in a single file."
 dependencies = [
-    "docutils",
+    "docutils>=0.19",
     "mistune==0.8.4",
 ]
 files = [
-    {file = "m2r2-0.3.2-py3-none-any.whl", hash = "sha256:d3684086b61b4bebe2307f15189495360f05a123c9bda2a66462649b7ca236aa"},
-    {file = "m2r2-0.3.2.tar.gz", hash = "sha256:ccd95b052dcd1ac7442ecb3111262b2001c10e4119b459c34c93ac7a5c2c7868"},
+    {file = "m2r2-0.3.3.post2-py3-none-any.whl", hash = "sha256:86157721eb6eabcd54d4eea7195890cc58fa6188b8d0abea633383cfbb5e11e3"},
+    {file = "m2r2-0.3.3.post2.tar.gz", hash = "sha256:e62bcb0e74b3ce19cda0737a0556b04cf4a43b785072fcef474558f2c1482ca8"},
 ]
 
 [[package]]
@@ -946,8 +947,8 @@ files = [
 
 [[package]]
 name = "sphinx-click"
-version = "4.4.0"
-requires_python = ">=3.7"
+version = "5.0.1"
+requires_python = ">=3.8"
 summary = "Sphinx extension that automatically documents click applications"
 dependencies = [
     "click>=7.0",
@@ -955,23 +956,20 @@ dependencies = [
     "sphinx>=2.0",
 ]
 files = [
-    {file = "sphinx-click-4.4.0.tar.gz", hash = "sha256:cc67692bd28f482c7f01531c61b64e9d2f069bfcf3d24cbbb51d4a84a749fa48"},
-    {file = "sphinx_click-4.4.0-py3-none-any.whl", hash = "sha256:2821c10a68fc9ee6ce7c92fad26540d8d8c8f45e6d7258f0e4fb7529ae8fab49"},
+    {file = "sphinx-click-5.0.1.tar.gz", hash = "sha256:fcc7df15e56e3ff17ebf446cdd316c2eb79580b37c49579fba11e5468802ef25"},
+    {file = "sphinx_click-5.0.1-py3-none-any.whl", hash = "sha256:31836ca22f746d3c26cbfdfe0c58edf0bca5783731a0b2e25bb6d59800bb75a1"},
 ]
 
 [[package]]
 name = "sphinx-rtd-theme"
-version = "1.3.0"
-requires_python = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,>=2.7"
+version = "0.5.1"
 summary = "Read the Docs theme for Sphinx"
 dependencies = [
-    "docutils<0.19",
-    "sphinx<8,>=1.6",
-    "sphinxcontrib-jquery<5,>=4",
+    "sphinx",
 ]
 files = [
-    {file = "sphinx_rtd_theme-1.3.0-py2.py3-none-any.whl", hash = "sha256:46ddef89cc2416a81ecfbeaceab1881948c014b1b6e4450b815311a89fb977b0"},
-    {file = "sphinx_rtd_theme-1.3.0.tar.gz", hash = "sha256:590b030c7abb9cf038ec053b95e5380b5c70d61591eb0b552063fbe7c41f0931"},
+    {file = "sphinx_rtd_theme-0.5.1-py2.py3-none-any.whl", hash = "sha256:fa6bebd5ab9a73da8e102509a86f3fcc36dec04a0b52ea80e5a033b2aba00113"},
+    {file = "sphinx_rtd_theme-0.5.1.tar.gz", hash = "sha256:eda689eda0c7301a80cf122dad28b1861e5605cbf455558f3775e1e8200e83a5"},
 ]
 
 [[package]]
@@ -1002,19 +1000,6 @@ summary = "sphinxcontrib-htmlhelp is a sphinx extension which renders HTML help 
 files = [
     {file = "sphinxcontrib-htmlhelp-2.0.1.tar.gz", hash = "sha256:0cbdd302815330058422b98a113195c9249825d681e18f11e8b1f78a2f11efff"},
     {file = "sphinxcontrib_htmlhelp-2.0.1-py3-none-any.whl", hash = "sha256:c38cb46dccf316c79de6e5515e1770414b797162b23cd3d06e67020e1d2a6903"},
-]
-
-[[package]]
-name = "sphinxcontrib-jquery"
-version = "4.1"
-requires_python = ">=2.7"
-summary = "Extension to include jQuery on newer Sphinx releases"
-dependencies = [
-    "Sphinx>=1.8",
-]
-files = [
-    {file = "sphinxcontrib-jquery-4.1.tar.gz", hash = "sha256:1620739f04e36a2c779f1a131a2dfd49b2fd07351bf1968ced074365933abc7a"},
-    {file = "sphinxcontrib_jquery-4.1-py2.py3-none-any.whl", hash = "sha256:f936030d7d0147dd026a4f2b5a57343d233f1fc7b363f68b3d4f1cb0993878ae"},
 ]
 
 [[package]]
