@@ -9,9 +9,9 @@ There are nice tutorials available on how to use `pdm`.
 
 ```bash
 # requires at least python 3.7
-pip install pdm 
-conda install pdm 
-mamba install pdm 
+pip install pdm
+conda install pdm
+mamba install pdm
 micromamba install pdm
 ```
 

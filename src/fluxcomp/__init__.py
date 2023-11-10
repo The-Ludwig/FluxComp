@@ -18,5 +18,5 @@ __all__ = (
     "CosmicRayFlux",
     "GlobalFitGST",
     "__logo__",
-    "__version__"
+    "__version__",
 )
