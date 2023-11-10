@@ -13,6 +13,12 @@ A numpy/pandas compatible python package to calculate Cosmic Ray flux models.
 
 This was born out of the [PANAMA](https://github.com/The-Ludwig/PANAMA) python package.
 
+## Installation
+
+```bash
+pip install FluxComp
+```
+
 ## Name
 
 In the German dub of Back to the Future, the Flux Capacitor is translated as the 'Flux Compensator'.
