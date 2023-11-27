@@ -4,6 +4,7 @@
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/The-Ludwig/FluxComp/ci.yml?style=for-the-badge)](https://github.com/The-Ludwig/FluxComp/actions/workflows/ci.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/The-Ludwig/FluxComp?label=test%20coverage&style=for-the-badge)](https://app.codecov.io/gh/The-Ludwig/FluxComp)
 [![PyPI](https://img.shields.io/pypi/v/FluxComp?style=for-the-badge)](https://pypi.org/project/FluxComp/)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%20%2F%20zenodo.10210601-blue.svg?style=for-the-badge)](https://doi.org/10.5281/zenodo.10210601)
 
 [![GitHub issues](https://img.shields.io/github/issues-raw/The-Ludwig/FluxComp?style=for-the-badge)](https://github.com/The-Ludwig/FluxComp/issues)
 [![GitHub](https://img.shields.io/github/license/The-Ludwig/FluxComp?style=for-the-badge)](https://github.com/The-Ludwig/FluxComp/blob/main/LICENSE)
