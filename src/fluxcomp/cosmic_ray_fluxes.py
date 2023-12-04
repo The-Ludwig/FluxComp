@@ -43,6 +43,8 @@ class GlobalFitGST(CosmicRayFlux):
         for z, a in [(1, 1), (2, 4), (6, 12), (14, 28), (26, 54)]
     ]
 
+    SHORTNAME = "GST"
+
     def __init__(self) -> None:
         super().__init__(GlobalFitGST.ValidPDGIDs)
         self.aij = {}
@@ -123,11 +125,15 @@ class HillasGaisser(CosmicRayFlux):
 
 
 class H3a(HillasGaisser):
+    SHORTNAME = "H3a"
+
     def __init__(self) -> None:
         super().__init__([1.7, 1.7, 1.14, 1.14, 1.14], 1.4, 2e9)
 
 
 class H4a(HillasGaisser):
+    SHORTNAME = "H4a"
+
     def __init__(self) -> None:
         super().__init__([200, 0, 0, 0, 0], 1.6, 60e9)
 
@@ -192,6 +198,7 @@ class BrokenPowerLaw(CosmicRayFlux):
 
 class TIG(BrokenPowerLaw):
     REFERENCE = "https://doi.org/10.1103/PhysRevD.54.4385"
+    SHORTNAME = "TIG"
 
     def __init__(self) -> None:
         proton_pdgid: PDGID = literals.proton
@@ -206,6 +213,7 @@ class TIG(BrokenPowerLaw):
 
 class TIGCutoff(BrokenPowerLaw):
     REFERENCE = "https://doi.org/10.1103/PhysRevD.54.4385"
+    SHORTNAME = "TIG-CO"
 
     def __init__(self) -> None:
         proton_pdgid: PDGID = literals.proton
@@ -220,6 +228,7 @@ class TIGCutoff(BrokenPowerLaw):
 
 class GlobalSplineFit(CosmicRayFlux):
     REFERENCE = "https://doi.org/10.48550/arXiv.1711.11432"
+    SHORTNAME = "GSF"
 
     z_to_a: ClassVar = {
         1: 1,
