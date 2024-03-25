@@ -4,6 +4,7 @@ Care is taken to make the flux models fast enough to be able to apply them
 to millions of data points when using numpy.
 This should make them applicable for reweighting.
 """
+
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
