@@ -4,14 +4,14 @@ description = "(ensator) provides numpy and pandas compatible implemenntations o
 authors = [
     {name = "Ludwig Neste", email = "ludwig.neste@fysik.su.se"},
 ]
-requires-python = ">=3.8,<3.12"
+requires-python = ">=3.8"
 readme = "README.md"
 license = {text = "MIT"}
 dependencies = [
     "numpy<2.0.0,>=1.23.4",
     "pandas<3.0.0,>=2.0.0",
     "particle<1.0.0,>=0.21.0",
-    "scipy<2.0.0,>=1.10.1",
+    "scipy<2.0.0,>=1.0.0",
 ]
 dynamic = ["version"]
 
@@ -103,7 +103,7 @@ dev = [
     "black<23.0.0,>=22.10.0",
     "pytest<8.0.0,>=7.2.0",
     "coverage<8.0.0,>=7.1.0",
-    "pre-commit<4.0.0,>=3.0.4",
+    "pre-commit>=3.5.0",
     "ruff<1.0.0,>=0.0.252",
     "mypy<2.0.0,>=1.0.1",
     "codespell<3.0.0,>=2.2.4",
