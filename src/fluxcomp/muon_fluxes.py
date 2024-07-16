@@ -22,7 +22,7 @@ class GaisserFlatEarthHighEnergy(MuonFlux):
         super().__init__()
 
     def _flux(self, id: PDGID, E: ArrayLike, **kwargs: Any) -> ArrayLike:
-        theta = kwargs["theta"] if "theta" in kwargs else 0
+        theta = kwargs.get("theta", 0)
 
         return (
             0.5
@@ -49,7 +49,7 @@ class GaisserFlatEarth(MuonFlux):
         super().__init__()
 
     def _flux(self, id: PDGID, E: ArrayLike, **kwargs: Any) -> ArrayLike:
-        theta = kwargs["theta"] if "theta" in kwargs else 0
+        theta = kwargs.get("theta", 0)
 
         p1 = self.epsilon_mu / (E * np.cos(theta) + self.alphaX0)
         s = (

@@ -2,3 +2,5 @@
 .coverage
 __pycache__
 dist/
+.venv
+.pdm-python
